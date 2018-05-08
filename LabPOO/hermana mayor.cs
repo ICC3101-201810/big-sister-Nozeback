@@ -14,7 +14,7 @@ namespace LabPOO
         public hermana_mayor(List<Product> Receta) {
             this.Receta = Receta;
         }
-        public bool Chequeo(Product p)
+        public bool Test(Product p)
         {
             foreach (Product f in Receta)
             {
@@ -22,10 +22,8 @@ namespace LabPOO
                 {
                     return false;
                 }
-                else
-                {
-                    return true;
-                }
+                return true;
+                
             }
         }
     }

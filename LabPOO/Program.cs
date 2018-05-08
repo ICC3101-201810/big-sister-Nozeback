@@ -15,27 +15,9 @@ namespace LabPOO
     {
         public static List<Product> cart;
         public static List<Product> market;
-        private static List<Product> buy;
-        private static hermana_mayor receta;
 
         static void Main(string[] args)
         {
-            buy = new List<Product>();
-            buy.Add(new Product("Láminas de Lasaña", 1250, 85, "400g"));
-            buy.Add(new Product("Queso Rallado Parmesano", 499, 102, "40g"));
-            buy.Add(new Product("Carne Molida", 4390, 15, "500g"));
-            buy.Add(new Product("Vino Blanco Caja", 2790, 84, "2L"));
-            buy.Add(new Product("Tomates Pelados en lata", 700, 48, "540g"));
-            buy.Add(new Product("Bolsa de Zanahorias", 890, 74, "1un"));
-            buy.Add(new Product("Vino Blanco Caja", 2790, 84, "2L"));
-            buy.Add(new Product("Malla de Cebollas", 1090, 91, "1kg"));
-            buy.Add(new Product("Aceite de Oliva", 1790, 77, "250g"));
-            buy.Add(new Product("Mantequilla", 850, 12, "125g"));
-            buy.Add(new Product("Harina", 890, 43, "1kg"));
-            buy.Add(new Product("Leche Entera", 820, 89, "1L"));
-            buy.Add(new Product("Sal Lobos", 330, 150, "1kg"));
-            buy.Add(new Product("Pimienta", 430, 84, "15g"));
-            hermana_mayor receta = new hermana_mayor(buy);
 
             cart = new List<Product>();
             try
@@ -167,7 +149,7 @@ namespace LabPOO
                     {
                         continue;
                     }
-                    CheckCompra cp1 = new CheckCompra(Chequeo(market[answer]));
+                    CheckCompra cp1 = new CheckCompra(market[answer]);
                     if (cp1 == true)
                     {
                         AddToCart(market[answer]);
